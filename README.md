@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Video-Transcript-Generator
 A while back, I wanted to get transcripts for a video that I watched. Tried googling but all sites wanted me to pay them for something as basic as transcript extraction. So, I built my own! Download the files, run it locally on your system. FREE OF COST
 =======
@@ -129,4 +128,3 @@ If iOS setup fails due to CocoaPods:
 brew install cocoapods
 pod --version
 ```
->>>>>>> 9a620f5 (Initial commit: web-first transcript app with local whisper and openai providers)
