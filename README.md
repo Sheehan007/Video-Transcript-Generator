@@ -1,5 +1,9 @@
 # Video-Transcript-Generator
-A while back, I wanted to get transcripts for a video that I watched. Tried googling but all sites wanted me to pay them for something as basic as transcript extraction. So, I built my own! Download the files, run it locally on your system. FREE OF COST
+
+
+A while back, I wanted to get transcripts for a video that I watched. Tried googling but all sites wanted me to pay them for something as basic as transcript extraction. So, I built my own! Download the files, run it locally on your system. 
+
+FREE OF COST
 =======
 # Vid Transcript Gem
 
