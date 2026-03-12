@@ -1,4 +1,4 @@
-# Vid Transcript Gem
+# Vid Transcript Generator
 
 Web-first MP4 transcript generator with Android and iOS packaging support.
 
