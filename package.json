@@ -1,0 +1,43 @@
+{
+  "name": "vid-transcript-gem",
+  "version": "1.0.0",
+  "description": "Web-first MP4 transcript generator with Android/iOS packaging support.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "HOST=127.0.0.1 PORT=4310 node server.js",
+    "dev:web": "HOST=127.0.0.1 PORT=4310 node server.js",
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js",
+    "health": "curl -s http://127.0.0.1:4310/api/health",
+    "mobile:sync": "npx cap sync",
+    "mobile:add:android": "npx cap add android",
+    "mobile:add:ios": "npx cap add ios",
+    "mobile:open:android": "npx cap open android",
+    "mobile:open:ios": "npx cap open ios"
+  },
+  "keywords": [
+    "transcript",
+    "video",
+    "mp4",
+    "openai",
+    "capacitor"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^7.6.0",
+    "@capacitor/core": "^7.1.0",
+    "@capacitor/ios": "^7.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.2",
+    "openai": "^4.74.0",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.1.0"
+  }
+}

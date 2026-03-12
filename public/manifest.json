@@ -1,0 +1,10 @@
+{
+  "name": "Vid Transcript Gem",
+  "short_name": "TranscriptGem",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f6f0",
+  "theme_color": "#173e2d",
+  "description": "Generate transcripts from MP4 videos and download TXT/SRT/VTT files.",
+  "icons": []
+}

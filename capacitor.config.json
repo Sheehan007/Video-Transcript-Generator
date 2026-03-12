@@ -1,0 +1,6 @@
+{
+  "appId": "com.vidtranscript.gem",
+  "appName": "Vid Transcript Gem",
+  "webDir": "public",
+  "bundledWebRuntime": false
+}

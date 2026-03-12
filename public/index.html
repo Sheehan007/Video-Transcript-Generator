@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vid Transcript Atelier</title>
+    <meta
+      name="description"
+      content="Upload MP4 videos and generate downloadable transcript files (TXT, SRT, VTT) with a local-first workflow."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <main class="page">
+      <header class="masthead card">
+        <div>
+          <p class="tiny-kicker">Analog voice, digital precision</p>
+          <h1>VID TRANSCRIPT ATELIER</h1>
+        </div>
+        <div class="mast-chips">
+          <span>MP4 -> TXT / SRT / VTT</span>
+          <span>Local Whisper First</span>
+          <span>Web, Android, iOS</span>
+        </div>
+      </header>
+
+      <section class="hero card">
+        <div class="hero-copy">
+          <p class="eyebrow">Web-first transcript pipeline</p>
+          <h2>
+            Vintage Look.<br />
+            Modern Transcript Build.
+          </h2>
+          <p>
+            Drop footage, extract speech, and export clean transcript files with one polished workflow. Local
+            Whisper is default, OpenAI is optional.
+          </p>
+          <div class="hero-tags">
+            <span>Storytelling UI</span>
+            <span>Production Output</span>
+            <span>Fast Iteration</span>
+          </div>
+        </div>
+        <div class="hero-posters">
+          <article>
+            <p>Feature</p>
+            <strong>TEXT ACCURACY</strong>
+            <small>Built for clear spoken-word capture.</small>
+          </article>
+          <article>
+            <p>Modes</p>
+            <strong>LOCAL + CLOUD</strong>
+            <small>Switch providers inside one interface.</small>
+          </article>
+          <article>
+            <p>Export</p>
+            <strong>CLEAN SUBTITLES</strong>
+            <small>Instant TXT, SRT, and VTT downloads.</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="workbench card">
+        <div class="workbench-head">
+          <h3>Drop your MP4, then generate the transcript.</h3>
+          <p>Local Whisper is recommended if you want repeatable no-quota runs.</p>
+        </div>
+
+        <form id="upload-form" class="upload-form">
+          <label class="drop-zone" for="video-input" id="drop-zone">
+            <input id="video-input" name="video" type="file" accept="video/mp4" required />
+            <strong id="file-label">Click to choose an MP4</strong>
+            <small>or drag and drop it here</small>
+          </label>
+
+          <details class="advanced">
+            <summary>Advanced Controls</summary>
+
+            <label for="provider">Provider</label>
+            <select id="provider">
+              <option value="local_whisper" selected>Local Whisper (Recommended)</option>
+              <option value="openai">OpenAI API</option>
+            </select>
+
+            <div id="local-whisper-model-wrap">
+              <label for="local-whisper-model">Local Whisper model</label>
+              <select id="local-whisper-model">
+                <option value="tiny">tiny (fastest)</option>
+                <option value="base" selected>base (balanced)</option>
+                <option value="small">small (better quality)</option>
+                <option value="medium">medium (higher quality)</option>
+                <option value="large">large (best quality, slowest)</option>
+              </select>
+              <p class="hint">Higher models improve accuracy but increase processing time.</p>
+            </div>
+
+            <label for="api-base">API base URL (optional)</label>
+            <input id="api-base" type="url" placeholder="https://your-transcript-api.com" />
+          </details>
+
+          <button id="submit-btn" type="submit">Generate Transcript</button>
+          <p id="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="card results hidden" id="results">
+        <div class="results-header">
+          <h2>Transcript Result</h2>
+          <div class="meta" id="meta"></div>
+        </div>
+        <textarea id="transcript-text" readonly></textarea>
+        <div class="actions">
+          <button id="copy-btn" type="button">Copy Text</button>
+          <button id="download-txt" type="button">Download TXT</button>
+          <button id="download-srt" type="button">Download SRT</button>
+          <button id="download-vtt" type="button">Download VTT</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app-config.js"></script>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
